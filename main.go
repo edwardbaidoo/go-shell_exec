@@ -8,8 +8,9 @@ import (
 )
 
 func main() {
-	_cmdpath := "/home/street/Development/go/src/file_exec/echo.go"
+	_cmdpath := "echo.go" //path to file to be executed
 
+	//if var _cmdpath isnt used, it can be commented out or removed.
 	output, err := exec.Command("go", "run", _cmdpath).CombinedOutput()
 	fmt.Println(string(output))
 	if err != nil {
